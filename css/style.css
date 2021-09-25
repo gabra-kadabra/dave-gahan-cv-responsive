@@ -2,13 +2,19 @@ body {
 	font-family: Arial, Helvetica, Sans-serif;
 	color: #434343;
 	background-color: rgb(206, 206, 206);
-	
 }
 
 .wrapper {
 	background-color: rgb(206, 206, 206);
 	height: 100%;
 ;}
+
+header {
+	text-align: center;
+	background-color: #18212e;
+	color: #FFF;
+    height: fit-content;
+}
 
 aside {
 	display: flex;
@@ -33,13 +39,6 @@ footer {
 	padding: 15px 0 15px 0;
 	margin: 0;
 	text-align: center;
-}
-
-header {
-	text-align: center;
-	background-color: #18212e;
-	color: #FFF;
-    height: fit-content;
 }
 
 .bio-title {

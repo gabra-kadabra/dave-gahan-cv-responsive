@@ -23,8 +23,24 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
+    <script>
+        function resizeDivs() {
+            var main = document.getElementById('main').offsetHeight;
+            var sidebar = document.getElementById('sidebar').offsetHeight;
+            if (sidebar > main && screen.width > 800) {
+                main = sidebar;
+                document.getElementById('main').style.height = document.getElementById('sidebar').style.height = main + 'px'
+            } else if (sidebar < main && screen.width > 800) {
+                sidebar = main;
+                document.getElementById('sidebar').style.height = document.getElementById('main').style.height = sidebar + 'px'
+            }
+        }
+
+        window.onload = resizeDivs;
+    </script>
 
     <div class="wrapper">
+
         <!-- header -->
         <header>
             <h1 class="bio-title">David Gahan</h1>
@@ -36,7 +52,7 @@
         </header>
 
         <!-- sidebar -->
-        <aside>
+        <aside id="sidebar">
             <img src="./images/Dave_Gahan.jpeg" alt="David Gahan" class="photo"
                 title="https://i.pinimg.com/originals/b0/3c/67/b03c67817092c4b7540e99a1c7df5a18.jpg" />
             <section class="contacts">
@@ -67,7 +83,9 @@
                 </ul>
             </section>
         </aside>
-        <div id="main">
+
+        <!-- main -->
+        <div id="main" class="right">
             <section class="discography">
                 <h2 class="discography-title">Discography</h2>
                 <h3 class="discography-category">Solo albums</h3>
