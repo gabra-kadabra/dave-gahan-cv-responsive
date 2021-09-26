@@ -35,8 +35,10 @@
                 document.getElementById('sidebar').style.height = document.getElementById('main').style.height = sidebar + 'px'
             }
         }
-
         window.onload = resizeDivs;
+        window.onresize = function (event) {
+            document.location.reload(true);
+        }
     </script>
 
     <div class="wrapper">
@@ -51,6 +53,7 @@
             </p>
         </header>
 
+        <div class="content">
         <!-- sidebar -->
         <aside id="sidebar">
             <img src="./images/Dave_Gahan.jpeg" alt="David Gahan" class="photo"
@@ -221,7 +224,7 @@
                 <h3 class="education-degree">Basildon - <span class="accent">Southend College of Technology</span></h3>
             </section>
         </div>
-
+    </div>
         <!-- footer -->
         <footer class="no-prt">
             <button class="btn btn-success" onclick="window.print()">
